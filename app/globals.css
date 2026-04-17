@@ -1,0 +1,54 @@
+/* ✅ ALWAYS FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ✅ Then Tailwind */
+@import "tailwindcss";
+
+/* 🔹 Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary: #248a8f;
+  --primary-dark: #1b6b6f;
+
+  --secondary: #e37804;
+  --secondary-dark: #b85f03;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* 🔹 Tailwind Theme */
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  --color-primary: #248a8f;
+  --color-primary-dark: #1b6b6f;
+
+  --color-secondary: #e37804;
+  --color-secondary-dark: #b85f03;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+/* 🌙 Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 🔹 Global styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
