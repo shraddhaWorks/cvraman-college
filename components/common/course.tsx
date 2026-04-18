@@ -7,13 +7,13 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 
 export default function Course() {
     return (
-        <section className="py-16 md:py-20 bg-background dark:bg-foreground transition-colors duration-300">
+        <section className="py-16 md:py-20 bg-background dark:bg-background transition-colors duration-300">
             <div className="container mx-auto px-6 md:px-12">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="relative overflow-hidden rounded-[2rem] bg-primary/[0.05] dark:bg-zinc-900 border border-primary/10 dark:border-white/5 p-8 md:p-16 text-center"
+                    className="relative overflow-hidden rounded-[2rem] bg-primary/[0.05] dark:bg-primary/[0.05] border border-primary/10 dark:border-primary/10 p-8 md:p-16 text-center"
                 >
                     {/* Decorative Background Elements */}
                     <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
@@ -29,7 +29,7 @@ export default function Course() {
                             <span className="text-primary">Academic Journey?</span>
                         </h2>
 
-                        <p className="text-foreground/70 dark:text-background/60 text-lg font-sans mb-10 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-foreground/70 dark:text-foreground/70 text-lg font-sans mb-10 max-w-2xl mx-auto leading-relaxed">
                             Explore our wide range of intermediate streams including MPC, BiPC, CEC, and MEC.
                             Find the perfect path that aligns with your career goals and aspirations.
                         </p>

@@ -10,10 +10,10 @@
   --foreground: #171717;
 
   --primary: #248a8f;
-  --primary-dark: #1b6b6f;
+  --primary-dark: #248a8f;
 
   --secondary: #e37804;
-  --secondary-dark: #b85f03;
+  --secondary-dark: #e37804;
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -25,10 +25,10 @@
   --color-foreground: #171717;
 
   --color-primary: #248a8f;
-  --color-primary-dark: #1b6b6f;
+  --color-primary-dark: #248a8f;
 
   --color-secondary: #e37804;
-  --color-secondary-dark: #b85f03;
+  --color-secondary-dark: #e37804;
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
@@ -37,8 +37,8 @@
 /* 🌙 Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
 

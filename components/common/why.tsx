@@ -29,7 +29,7 @@ const reasons = [
 
 export default function Why() {
   return (
-    <section className="py-20 px-6 md:px-12 bg-primary dark:bg-zinc-950 transition-colors duration-300 overflow-hidden border-b border-white dark:border-t border-white/20">
+    <section className="py-20 px-6 md:px-12 bg-primary dark:bg-primary transition-colors duration-300 overflow-hidden border-b border-white dark:border-t border-white/20">
       <div className="container mx-auto">
         
         {/* --- Header Area --- */}

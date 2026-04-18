@@ -28,7 +28,7 @@ const highlights = [
 
 export default function Welcome() {
   return (
-    <section className="relative py-20 md:py-20 bg-background dark:bg-zinc-950 px-6 md:px-12 overflow-hidden">
+    <section className="relative py-20 md:py-20 bg-background dark:bg-background px-6 md:px-12 overflow-hidden">
       
       {/* Background Decorative Blobs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -59,7 +59,7 @@ export default function Welcome() {
               </span>
             </h2>
 
-            <p className="text-foreground/60 dark:text-background/60 mb-12 text-lg md:text-xl font-sans leading-relaxed max-w-3xl">
+            <p className="text-foreground/60 dark:text-foreground/60 mb-12 text-lg md:text-xl font-sans leading-relaxed max-w-3xl">
               Named after the legendary Nobel Laureate, we are a launchpad for future scientists, engineers, and leaders. We provide a rigorous academic environment blended with modern teaching methodologies.
             </p>
             
@@ -71,9 +71,9 @@ export default function Welcome() {
                 'JEE/NEET Coaching', 
                 'Expert Mentorship'
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 border border-foreground/5 rounded-xl shadow-sm">
+                <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-white border border-foreground/5 rounded-xl shadow-sm">
                   <CheckCircle className="text-secondary" size={18} />
-                  <span className="font-bold text-sm text-foreground/80 dark:text-background/80 uppercase tracking-tight">{item}</span>
+                  <span className="font-bold text-sm text-foreground/80 dark:text-foreground/80 uppercase tracking-tight">{item}</span>
                 </div>
               ))}
             </div>
@@ -89,7 +89,7 @@ export default function Welcome() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group relative p-10 rounded-[3rem] bg-white dark:bg-zinc-900 border border-foreground/5 hover:border-primary/30 transition-all duration-500 shadow-xl shadow-black/[0.02] hover:shadow-primary/10 overflow-hidden"
+              className="group relative p-10 rounded-[3rem] bg-white dark:bg-white border border-foreground/5 hover:border-primary/30 transition-all duration-500 shadow-xl shadow-black/[0.02] hover:shadow-primary/10 overflow-hidden"
             >
               {/* Card Corner Gradient */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700" />
@@ -102,12 +102,12 @@ export default function Welcome() {
                 {item.title}
               </h3>
               
-              <p className="text-foreground/50 dark:text-background/60 leading-relaxed font-sans text-base">
+              <p className="text-foreground/50 dark:text-foreground/50 leading-relaxed font-sans text-base">
                 {item.desc}
               </p>
 
               {/* Interactive Bottom Bar */}
-              <div className="mt-8 w-12 h-1.5 bg-foreground/5 dark:bg-white/5 rounded-full overflow-hidden">
+              <div className="mt-8 w-12 h-1.5 bg-foreground/5 dark:bg-foreground/5 rounded-full overflow-hidden">
                 <div className="w-0 group-hover:w-full h-full bg-primary transition-all duration-500" />
               </div>
             </motion.div>
