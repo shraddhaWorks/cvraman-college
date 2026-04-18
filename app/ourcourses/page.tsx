@@ -41,7 +41,7 @@ export default function CoursesPage() {
   return (
     <div className="w-full">
       {/* --- Hero Section (Kept exactly as requested) --- */}
-      <section className="relative overflow-hidden dark:bg-foreground bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-15">
+      <section className="relative overflow-hidden dark:bg-primary/[0.08] bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-15">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -52,7 +52,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center lg:text-left">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-white text-slate-900 mb-6 leading-tight">
+              <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-slate-900 text-slate-900 mb-6 leading-tight">
                 Our <span className="text-primary">Courses</span>
               </h1>
               <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -61,13 +61,13 @@ export default function CoursesPage() {
               </p>
             </div>
             <div className="">
-              <div className="relative p-8 rounded-3xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden backdrop-blur-sm transition-all duration-300">
-                <p className="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed relative z-10 font-sans">
+              <div className="relative p-8 rounded-3xl bg-white dark:bg-white border border-slate-200 dark:border-slate-200 shadow-xl shadow-slate-200/50 dark:shadow-xl shadow-slate-200/50 overflow-hidden backdrop-blur-sm transition-all duration-300">
+                <p className="text-slate-600 dark:text-slate-600 italic text-lg leading-relaxed relative z-10 font-sans">
                   "Our courses are designed to provide strong academic foundations, critical thinking skills, and the confidence to excel in competitive environments."
                 </p>
                 <div className="mt-6 flex items-center gap-4 relative z-10">
                   <div className="h-10 w-1 bg-secondary rounded-full" />
-                  <span className="text-slate-600 dark:text-background font-bold uppercase tracking-widest text-xs">
+                  <span className="text-slate-600 dark:text-slate-600 font-bold uppercase tracking-widest text-xs">
                     Career Focused Learning
                   </span>
                 </div>
@@ -78,13 +78,13 @@ export default function CoursesPage() {
       </section>
 
       {/* --- Updated Courses Content --- */}
-      <section className="py-20 bg-primary/[0.08] dark:bg-foreground transition-colors duration-300">    
-        <div className="max-w-7xl mx-auto relative overflow-hidden px-15 py-20 border border-slate-200 dark:border-white/10 rounded-3xl bg-white dark:bg-zinc-900 shadow-lg">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/50 dark:bg-secondary/5 rounded-bl-full -mr-10 -mt-10" />
+      <section className="py-20 bg-primary/[0.08] dark:bg-primary/[0.08] transition-colors duration-300">    
+        <div className="max-w-7xl mx-auto relative overflow-hidden px-15 py-20 border border-slate-200 dark:border-slate-200 rounded-3xl bg-white dark:bg-white shadow-lg">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/50 dark:bg-secondary/50 rounded-bl-full -mr-10 -mt-10" />
           <div className="mb-12 text-center">
             
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Choose Your <span className="text-primary">Specialization</span></h2>
-            <p className="text-foreground/60 dark:text-background/60 max-w-2xl mx-auto">Providing specialized coaching for JEE, NEET, and CA-Foundation along with regular intermediate curriculum.</p>
+            <p className="text-foreground/60 dark:text-foreground/60 max-w-2xl mx-auto">Providing specialized coaching for JEE, NEET, and CA-Foundation along with regular intermediate curriculum.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -92,7 +92,7 @@ export default function CoursesPage() {
               <motion.div
                 key={index}
                 whileHover={{ y: -10 }}
-                className="relative group p-8 rounded-[2rem] bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-300"
+                className="relative group p-8 rounded-[2rem] bg-white dark:bg-white border border-slate-200 dark:border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300"
               >
                 {/* Accent Icon */}
                 <div
@@ -102,7 +102,7 @@ export default function CoursesPage() {
                   {course.icon}
                 </div>
 
-                <h3 className="text-4xl font-bold font-heading mb-2 text-slate-900 dark:text-white">
+                <h3 className="text-4xl font-bold font-heading mb-2 text-slate-900 dark:text-slate-900">
                   {course.title}
                 </h3>
 
@@ -110,7 +110,7 @@ export default function CoursesPage() {
                   {course.name}
                 </p>
 
-                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                <p className="text-slate-500 dark:text-slate-500 text-sm leading-relaxed mb-6 font-sans">
                   {course.desc}
                 </p>
                 {/* View Syllabus Button with Animated Underline 

@@ -35,9 +35,9 @@ export default function ContactPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-     <section className="relative overflow-hidden dark:bg-foreground bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-20 transition-colors duration-300">
+     <section className="relative overflow-hidden dark:bg-primary/[0.08] bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-20 transition-colors duration-300">
   {/* Adaptive Background Texture */}
-  <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+  <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03]"
     style={{ 
       backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)', 
       backgroundSize: '32px 32px' 
@@ -48,11 +48,11 @@ export default function ContactPage() {
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       <div>
         {/* Responsive Heading */}
-        <h1 className="text-2xl lg:text-5xl font-bold tracking-tight dark:text-white text-slate-900 mb-6 leading-tight font-heading">
+        <h1 className="text-2xl lg:text-5xl font-bold tracking-tight dark:text-slate-900 text-slate-900 mb-6 leading-tight font-heading">
           Contact <span className="text-primary">Us</span>
         </h1>
         {/* Responsive Description */}
-        <p className="text-lg lg:text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
+        <p className="text-lg lg:text-xl text-slate-500 dark:text-slate-500 leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
           Get in touch with our team - we're here to help you navigate your 
           academic journey and answer any questions you may have.
         </p>
@@ -60,15 +60,15 @@ export default function ContactPage() {
 
       {/* Elegant Card - Clean Adaptive Version */}
       <div className="">
-        <div className="relative p-8 rounded-3xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden backdrop-blur-sm transition-all duration-300">
-          <p className="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed relative z-10 font-sans">
+        <div className="relative p-8 rounded-3xl bg-white dark:bg-white border border-slate-200 dark:border-slate-200 shadow-xl shadow-slate-200/50 dark:shadow-xl shadow-slate-200/50 overflow-hidden backdrop-blur-sm transition-all duration-300">
+          <p className="text-slate-600 dark:text-slate-600 italic text-lg leading-relaxed relative z-10 font-sans">
             "Our dedicated support team is committed to providing timely assistance, ensuring that every student and parent feels heard and supported."
           </p>
 
           <div className="mt-6 flex items-center gap-4 relative z-10">
             {/* Using your secondary orange variable */}
             <div className="h-10 w-1 bg-secondary rounded-full" />
-            <span className="text-slate-600 dark:text-background font-bold uppercase tracking-widest text-xs">
+            <span className="text-slate-600 dark:text-slate-600 font-bold uppercase tracking-widest text-xs">
               Support Center
             </span>
           </div>
@@ -79,13 +79,13 @@ export default function ContactPage() {
 </section>
 
       {/* Contact Content */}
-     <section className="py-2 bg-primary/[0.08] dark:bg-foreground">
+     <section className="py-2 bg-primary/[0.08] dark:bg-primary/[0.08]">
   <div className="max-w-7xl mx-auto px-6">
     {/* The Bordered Container */}
-    <div className="relative border border-slate-200 bg-white dark:border-white/10 rounded-[2.5rem] overflow-hidden bg-slate-50/30 dark:bg-background/[0.02] p-8 md:p-16 transition-colors duration-300">
+    <div className="relative border border-slate-200 bg-white dark:border-slate-200 rounded-[2.5rem] overflow-hidden bg-slate-50/30 dark:bg-slate-50/30 p-8 md:p-16 transition-colors duration-300">
       
       {/* Decorative Corner Accent */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/50 dark:bg-secondary/5 rounded-bl-full -mr-10 -mt-10" />
+      <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/50 dark:bg-secondary/50 rounded-bl-full -mr-10 -mt-10" />
        
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
         
@@ -97,7 +97,7 @@ export default function ContactPage() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8 leading-tight font-heading">
+          <h2 className="text-2xl md:text-5xl font-bold text-slate-900 dark:text-slate-900 mb-8 leading-tight font-heading">
             Get in <span className="text-primary">Touch</span>
           </h2>
 
@@ -109,14 +109,14 @@ export default function ContactPage() {
               { icon: "🕒", title: "Office Hours", desc: "Mon - Fri: 9:00 AM - 6:00 PM", desc2: "Sat: 10:00 AM - 4:00 PM" },
             ].map((item, idx) => (
               <div key={idx} className="flex gap-6 group">
-                <div className="w-12 h-12 shrink-0 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-2xl flex items-center justify-center text-2xl shadow-sm group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 shrink-0 bg-white dark:bg-white border border-slate-200 dark:border-slate-200 rounded-2xl flex items-center justify-center text-2xl shadow-sm group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white mb-1 font-heading">
+                  <h3 className="font-bold text-slate-900 dark:text-slate-900 mb-1 font-heading">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-slate-400 font-sans text-sm leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-600 font-sans text-sm leading-relaxed">
                     {item.desc}
                     {item.desc2 && <><br />{item.desc2}</>}
                   </p>
@@ -130,10 +130,10 @@ export default function ContactPage() {
         <div className="lg:col-span-7">
           <div className="relative group">
             {/* Glow Effect */}
-            <div className="absolute inset-0  dark:bg-foreground  blur-3xl rounded-full scale-90 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute inset-0 bg-primary/[0.08] dark:bg-primary/[0.08] blur-3xl rounded-full scale-90 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-200/50 dark:shadow-none transition-all duration-300">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 font-heading">
+            <div className="relative bg-white dark:bg-white border border-slate-200 dark:border-slate-200 rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-200/50 dark:shadow-xl shadow-slate-200/50 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-900 mb-8 font-heading">
                 Send us a Message
               </h3>
               
@@ -144,7 +144,7 @@ export default function ContactPage() {
                     type="text"
                     name="name"
                     required
-                    className="w-full px-5 py-3 bg-slate-50 dark:bg-foreground border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
+                    className="w-full px-5 py-3 bg-slate-50 dark:bg-slate-50 border border-slate-200 dark:border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
                     placeholder="John Doe"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     type="email"
                     name="email"
                     required
-                    className="w-full px-5 py-3 bg-slate-50 dark:bg-foreground border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
+                    className="w-full px-5 py-3 bg-slate-50 dark:bg-slate-50 border border-slate-200 dark:border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     type="text"
                     name="subject"
                     required
-                    className="w-full px-5 py-3 bg-slate-50 dark:bg-foreground border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
+                    className="w-full px-5 py-3 bg-slate-50 dark:bg-slate-50 border border-slate-200 dark:border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans"
                     placeholder="How can we help?"
                   />
                 </div>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     name="message"
                     required
                     rows={4}
-                    className="w-full px-5 py-3 bg-slate-50 dark:bg-foreground border border-slate-200 dark:border-white/10 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans resize-none"
+                    className="w-full px-5 py-3 bg-slate-50 dark:bg-slate-50 border border-slate-200 dark:border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none dark:text-white transition-all font-sans resize-none"
                     placeholder="Your message here..."
                   />
                 </div>
@@ -197,23 +197,23 @@ export default function ContactPage() {
 </section>
 
       {/* Map Section */}
-     <section className="py-24  bg-primary/[0.08] dark:bg-foreground transition-colors duration-300">
+     <section className="py-24  bg-primary/[0.08] dark:bg-primary/[0.08] transition-colors duration-300">
   <div className="max-w-7xl mx-auto px-6">
     
     {/* Section Header */}
     <div className="text-center mb-10">
-      <h2 className="text-2xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 font-heading tracking-tight">
+      <h2 className="text-2xl md:text-5xl font-bold text-slate-900 dark:text-slate-900 mb-4 font-heading tracking-tight">
         Located in <span className="text-primary">Ananthapuram</span>
       </h2>
       <div className="mt-4 flex justify-center items-center gap-4">
-    <div className="h-[3px] w-30 bg-secondary dark:bg-white/10" />
+    <div className="h-[3px] w-30 bg-secondary dark:bg-secondary" />
     
   </div>
     </div>
 
     {/* The Map Container */}
     <div className="relative group">
-      <div className="relative border border-slate-200 dark:border-white/10 rounded-[2.5rem] overflow-hidden bg-slate-50 dark:bg-background shadow-2xl shadow-slate-200/50 dark:shadow-none transition-all duration-300">
+      <div className="relative border border-slate-200 dark:border-slate-200 rounded-[2.5rem] overflow-hidden bg-slate-50 dark:bg-slate-50 shadow-2xl shadow-slate-200/50 dark:shadow-2xl shadow-slate-200/50 transition-all duration-300">
         
         {/* Real Google Map Integration */}
         <div className="w-full h-[500px] relative">
@@ -225,17 +225,17 @@ export default function ContactPage() {
             allowFullScreen={true} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            className="dark:invert dark:grayscale dark:contrast-125 dark:opacity-80 transition-all duration-500"
+            className="transition-all duration-500"
           ></iframe>
 
           {/* Floating Location Tag Overlay (Bottom Left) */}
-          <div className="absolute bottom-8 left-8 hidden md:flex items-center gap-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-white/10 p-5 rounded-3xl shadow-lg z-20 pointer-events-none">
+          <div className="absolute bottom-8 left-8 hidden md:flex items-center gap-4 bg-white/90 dark:bg-white/90 backdrop-blur-md border border-slate-200 dark:border-slate-200 p-5 rounded-3xl shadow-lg z-20 pointer-events-none">
             <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white font-bold font-heading text-lg">
               AP
             </div>
             <div>
               <p className="text-xs font-bold text-primary  mb-0.5">Andhra Pradesh</p>
-              <p className="text-sm text-slate-900 dark:text-white font-sans font-semibold leading-none">Ananthapuram District</p>
+              <p className="text-sm text-slate-900 dark:text-slate-900 font-sans font-semibold leading-none">Ananthapuram District</p>
             </div>
           </div>
         </div>

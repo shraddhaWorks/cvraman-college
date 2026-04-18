@@ -15,9 +15,9 @@ export default function Home() {
       <Welcome/>
     
       <Mission/>
-      <Course/>
-      <Why/>
       
+      <Why/>
+      <Course/>
 
      </>
   );

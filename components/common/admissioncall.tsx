@@ -4,7 +4,7 @@ export default function admissioncall() {
   return (
     <div >
        {/* Bottom Banner */}
-          <div className="mt-20 relative p-8 md:p-12 rounded-[2.5rem] bg-primary text-white overflow-hidden shadow-2xl">
+          <div className="mt-20 relative p-8 md:p-12 rounded-[2.5rem] bg-primary text-white overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl" />
             <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="text-center md:text-left">
