@@ -1,156 +1,137 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Beaker, Calculator, Landmark, BarChart3, ChevronRight } from 'lucide-react';
+import Why from '@/components/common/why';
+import Admissioncall from '@/components/common/admissioncall';
+
+const collegeCourses = [
+  {
+    title: "MPC",
+    name: "Maths, Physics, Chemistry",
+    icon: <Calculator size={28} />,
+    color: "var(--primary)",
+    desc: "Foundation for Engineering, Architecture, and Pure Sciences."
+  },
+  {
+    title: "BiPC",
+    name: "Biology, Physics, Chemistry",
+    icon: <Beaker size={28} />,
+    color: "var(--secondary)",
+    desc: "Path to Medicine, Agriculture, and Biotechnology."
+  },
+  {
+    title: "CEC",
+    name: "Civics, Economics, Commerce",
+    icon: <Landmark size={28} />,
+    color: "var(--primary)",
+    desc: "Gateway to CA, Law, Business, and Administration."
+  },
+  {
+    title: "MEC",
+    name: "Maths, Economics, Commerce",
+    icon: <BarChart3 size={28} />,
+    color: "var(--secondary)",
+    desc: "Focus on Corporate Finance, Actuarial Science, and Data."
+  }
+];
+
 export default function CoursesPage() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-800 dark:from-green-900 dark:to-green-950 text-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Courses</h1>
-          <p className="text-xl text-green-100">
-            Comprehensive programs designed for career excellence
-          </p>
-        </div>
-      </section>
-
-      {/* All Courses */}
-      <section className="py-16 sm:py-24 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Full Stack Web Development",
-                duration: "6 Months",
-                level: "Beginner to Intermediate",
-                price: "₹ 25,000",
-                topics: ["HTML/CSS", "JavaScript", "React", "Node.js", "MongoDB"],
-              },
-              {
-                title: "Mobile App Development",
-                duration: "4 Months",
-                level: "Intermediate",
-                price: "₹ 20,000",
-                topics: ["React Native", "Flutter", "API Integration", "UI/UX"],
-              },
-              {
-                title: "Cloud & DevOps Masterclass",
-                duration: "3 Months",
-                level: "Advanced",
-                price: "₹ 30,000",
-                topics: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
-              },
-              {
-                title: "Data Science & ML",
-                duration: "5 Months",
-                level: "Intermediate to Advanced",
-                price: "₹ 28,000",
-                topics: ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow"],
-              },
-              {
-                title: "UI/UX Design Professional",
-                duration: "4 Months",
-                level: "Beginner",
-                price: "₹ 18,000",
-                topics: ["Figma", "Wireframing", "Prototyping", "User Research"],
-              },
-              {
-                title: "Database Administration",
-                duration: "3 Months",
-                level: "Intermediate",
-                price: "₹ 22,000",
-                topics: ["SQL", "PostgreSQL", "MySQL", "Database Design"],
-              },
-              {
-                title: "Python Programming",
-                duration: "2 Months",
-                level: "Beginner",
-                price: "₹ 15,000",
-                topics: ["Python Basics", "OOP", "Libraries", "Projects"],
-              },
-              {
-                title: "Digital Marketing Fundamentals",
-                duration: "3 Months",
-                level: "Beginner",
-                price: "₹ 16,000",
-                topics: ["SEO", "SEM", "Social Media", "Email Marketing"],
-              },
-              {
-                title: "Cybersecurity Essentials",
-                duration: "4 Months",
-                level: "Intermediate",
-                price: "₹ 26,000",
-                topics: ["Network Security", "Encryption", "Ethical Hacking"],
-              },
-            ].map((course, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
-                  <h3 className="text-xl font-bold">{course.title}</h3>
-                </div>
-                <div className="p-6">
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600 dark:text-gray-400">Duration:</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">
-                        {course.duration}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600 dark:text-gray-400">Level:</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">
-                        {course.level}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-600 dark:text-gray-400">Price:</span>
-                      <span className="font-bold text-green-600 dark:text-green-400">
-                        {course.price}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="mb-6 border-t pt-6">
-                    <p className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                      Topics Covered:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {course.topics.map((topic, i) => (
-                        <span
-                          key={i}
-                          className="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full"
-                        >
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition-colors">
-                    Enroll Now
-                  </button>
+      {/* --- Hero Section (Kept exactly as requested) --- */}
+      <section className="relative overflow-hidden dark:bg-foreground bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-15">
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(#000 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-white text-slate-900 mb-6 leading-tight">
+                Our <span className="text-primary">Courses</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Discover a variety of intermediate programs designed to shape your academic future.
+                Choose from MPC, BiPC, CEC, and MEC streams tailored to match your career goals.
+              </p>
+            </div>
+            <div className="">
+              <div className="relative p-8 rounded-3xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden backdrop-blur-sm transition-all duration-300">
+                <p className="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed relative z-10 font-sans">
+                  "Our courses are designed to provide strong academic foundations, critical thinking skills, and the confidence to excel in competitive environments."
+                </p>
+                <div className="mt-6 flex items-center gap-4 relative z-10">
+                  <div className="h-10 w-1 bg-secondary rounded-full" />
+                  <span className="text-slate-600 dark:text-background font-bold uppercase tracking-widest text-xs">
+                    Career Focused Learning
+                  </span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Can't find your course?
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
-            Contact us to customize a course based on your requirements
-          </p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Contact Us
-          </button>
+      {/* --- Updated Courses Content --- */}
+      <section className="py-20 bg-primary/[0.08] dark:bg-foreground transition-colors duration-300">    
+        <div className="max-w-7xl mx-auto relative overflow-hidden px-15 py-20 border border-slate-200 dark:border-white/10 rounded-3xl bg-white dark:bg-zinc-900 shadow-lg">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/50 dark:bg-secondary/5 rounded-bl-full -mr-10 -mt-10" />
+          <div className="mb-12 text-center">
+            
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Choose Your <span className="text-primary">Specialization</span></h2>
+            <p className="text-foreground/60 dark:text-background/60 max-w-2xl mx-auto">Providing specialized coaching for JEE, NEET, and CA-Foundation along with regular intermediate curriculum.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {collegeCourses.map((course, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -10 }}
+                className="relative group p-8 rounded-[2rem] bg-white dark:bg-zinc-900 border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-300"
+              >
+                {/* Accent Icon */}
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300"
+                  style={{ backgroundColor: `${course.color}15`, color: course.color }}
+                >
+                  {course.icon}
+                </div>
+
+                <h3 className="text-4xl font-bold font-heading mb-2 text-slate-900 dark:text-white">
+                  {course.title}
+                </h3>
+
+                <p className="text-xs font-bold uppercase tracking-widest mb-4 transition-colors" style={{ color: course.color }}>
+                  {course.name}
+                </p>
+
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 font-sans">
+                  {course.desc}
+                </p>
+                {/* View Syllabus Button with Animated Underline 
+                <button className="flex items-center gap-2 text-sm font-bold group-hover:gap-4 transition-all" style={{ color: course.color }}>
+                  View Syllabus <ChevronRight size={16} />
+                </button>
+*/}
+                {/* Bottom decorative bar */}
+                <div
+                  className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1 w-0 group-hover:w-1/2 transition-all duration-300 rounded-full"
+                  style={{ backgroundColor: course.color }}
+                />
+              </motion.div>
+            ))}
+          </div>
+         
+         <Admissioncall/>
         </div>
+       
       </section>
+       <Why/>
     </div>
   );
 }

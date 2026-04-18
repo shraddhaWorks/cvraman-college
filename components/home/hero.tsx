@@ -20,31 +20,36 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] w-full flex flex-col md:flex-row items-center overflow-hidden bg-background">
+    <section className="relative min-h-[85vh] w-full flex flex-col md:flex-row items-center overflow-hidden bg-background dark:bg-zinc-950">
       
-      {/* --- Left Side: Automatic Carousel (Continuous Transition) --- */}
-      <div className="relative w-full md:w-1/2 h-[400px] md:h-[85vh] overflow-hidden bg-gray-200">
+      {/* --- Left Side: Automatic Carousel --- */}
+      <div className="relative w-full md:w-1/2 h-[400px] md:h-[85vh] overflow-hidden bg-gray-200 dark:bg-zinc-900">
         <AnimatePresence initial={false}>
           <motion.img
             key={index}
             src={carouselImages[index]}
-            // Initial state: invisible and slightly zoomed in
             initial={{ opacity: 0, scale: 1.1 }}
-            // Animate to: fully visible and normal scale
             animate={{ opacity: 1, scale: 1 }}
-            // Exit state: fade out while the new one comes in on top
             exit={{ opacity: 0 }}
             transition={{ 
               duration: 1.2, 
-              ease: [0.4, 0, 0.2, 1] // Professional cubic-bezier
+              ease: [0.4, 0, 0.2, 1]
             }}
             className="absolute inset-0 w-full h-full object-cover"
             alt="SIR C.V RAMAN College Campus"
           />
         </AnimatePresence>
         
-        {/* Modern Overlay: blends image into the right-side content */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background/20 md:to-background pointer-events-none" />
+        {/* --- DYNAMIC OVERLAY --- */}
+        {/* 1. Global Darken: Makes the image less "punchy" in dark mode */}
+        <div className="absolute inset-0 bg-black/0 dark:bg-black/20 pointer-events-none transition-colors duration-500" />
+
+        {/* 2. Blend Gradient: Blends image into the background color */}
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r 
+          from-transparent via-transparent 
+          to-background/80 md:to-background 
+          dark:to-zinc-950/80 md:dark:to-zinc-950 
+          pointer-events-none transition-colors duration-500" />
       </div>
 
       {/* --- Right Side: Content --- */}
@@ -57,11 +62,11 @@ export default function Hero() {
           <span className="text-secondary font-bold tracking-widest uppercase text-xs mb-3 block">
             Established for Excellence
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight font-heading">
+          <h1 className="text-3xl md:text-6xl font-bold leading-tight font-heading dark:text-white">
             SIR C.V RAMAN <br />
             <span className="text-primary">Junior Inter College</span>
           </h1>
-          <p className="mt-6 text-lg text-foreground/70 font-sans max-w-lg leading-relaxed">
+          <p className="mt-6 text-lg text-foreground/70 dark:text-background/60 font-sans max-w-lg leading-relaxed">
             Nurturing the scientists, engineers, and leaders of tomorrow. Join 
             Anantapur's premier institution for intermediate education.
           </p>
