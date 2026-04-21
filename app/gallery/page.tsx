@@ -27,28 +27,52 @@ export default function GalleryPage() {
     <div className="w-full bg-white dark:bg-transparent transition-colors duration-300">
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden dark:bg-foreground bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-20">
-        <div
-          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
-          style={{
-            backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)',
-            backgroundSize: '32px 32px'
-          }}
-        />
+     <section className="relative overflow-hidden dark:bg-primary/[0.08] bg-primary/[0.08] pt-24 pb-20 lg:pt-15 lg:pb-20 transition-colors duration-300">
+  {/* Subtle Dot Matrix Pattern */}
+  <div className="absolute inset-0 opacity-[0.03]"
+    style={{ 
+      backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', 
+      backgroundSize: '32px 32px' 
+    }}>
+  </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-white text-slate-900 mb-6 leading-tight font-heading">
-            Campus <span className="text-primary">Gallery</span>
-          </h1>
-          <p className="text-lg lg:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-sans">
-            A visual journey through CVRT College—capturing moments of innovation,
-            academic excellence, and vibrant student life.
+  <div className="max-w-7xl mx-auto px-6 relative z-10 text-center lg:text-left">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Text Content */}
+      <div>
+        <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-slate-900 text-slate-900 mb-6 leading-tight font-heading">
+          Campus <span className="text-primary">Gallery</span>
+        </h1>
+        <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-xl mx-auto lg:mx-0 font-sans">
+          A visual journey through the moments that define CVRT College—capturing the 
+          spirit of innovation, culture, and life in Ananthapuram.
+        </p>
+      </div>
+
+      {/* Elegant Card - Consistent Light Style */}
+      <div className="">
+        <div className="relative p-8 rounded-3xl bg-white dark:bg-white border border-slate-200 dark:border-slate-200 shadow-xl shadow-slate-200/50 dark:shadow-xl shadow-slate-200/50 overflow-hidden backdrop-blur-sm transition-all duration-300">
+          <p className="text-slate-600 dark:text-slate-600 italic text-lg leading-relaxed relative z-10 font-sans">
+            "Visual stories of growth and discovery. Every frame at CVRT reflects our commitment to building a brighter, more innovative future."
           </p>
+
+          <div className="mt-6 flex items-center gap-4 relative z-10">
+            {/* Orange Accent Bar */}
+            <div className="h-10 w-1 bg-orange-500 rounded-full" />
+            <span className="text-slate-600 dark:text-slate-600 font-bold uppercase tracking-widest text-xs font-heading">
+              Capturing Excellence
+            </span>
+          </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* GALLERY SECTION */}
-      <section className="py-24 bg-primary/[0.08] dark:bg-foreground transition-colors">
+      <section className="py-24 bg-primary/[0.08] dark:bg-primary/[0.08] transition-colors">
         <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8">
 
           {/* MAIN BENTO GRID */}
