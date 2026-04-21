@@ -21,6 +21,7 @@ export default function Navbar() {
     { href: '/ourcourses', label: 'Our Courses' },
     { href: '/aboutus', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   return (
