@@ -46,7 +46,7 @@ export default function Welcome() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-primary/5 border border-primary/10 backdrop-blur-sm">
               <Star size={16} className="text-secondary fill-secondary" />
-              <span className="text-primary text-xs md:text-sm font-bold tracking-[0.2em] uppercase">
+             <span className="text-xs font-bold uppercase tracking-widest text-secondary">
                 Anantapur's Leading Institution
               </span>
             </div>
