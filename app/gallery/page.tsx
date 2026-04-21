@@ -38,7 +38,7 @@ export default function GalleryPage() {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h1 className="text-3xl lg:text-5xl font-bold tracking-tight dark:text-white text-slate-900 mb-6 leading-tight font-heading">
-            Campus <span className="text-secondary">Gallery</span>
+            Campus <span className="text-primary">Gallery</span>
           </h1>
           <p className="text-lg lg:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-sans">
             A visual journey through CVRT College—capturing moments of innovation,

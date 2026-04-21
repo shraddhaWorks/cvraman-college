@@ -20,8 +20,9 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/ourcourses', label: 'Our Courses' },
     { href: '/aboutus', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/contact', label: 'Contact' },
+    
   ];
 
   return (
